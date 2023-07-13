@@ -4,8 +4,10 @@
     "description": "Base Level Extension",
     "version": "1.0",
     "action": {
-      "default_popup": "hello.html"
-      // "default_icon": "https://clipart.world/wp-content/uploads/2020/06/Bongo-Cat-png-3.png"
+      "default_popup": "hello.html",
+      "icons": {
+        "128": "icon128.png"
+      }
     }, 
     "content scripts": [
       {
@@ -14,4 +16,6 @@
       }
     ]
   }
+  
+ 
 
