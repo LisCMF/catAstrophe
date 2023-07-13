@@ -20,9 +20,20 @@ console.log("Hello")
 // test.style.color = green;
 setTimeout(()=>{
 
-const body = document.querySelector('html');
-console.log(body.style);
-//body.style.backgroundColor = "red";
+// const someDiv = document.querySelectorAll('div');
+ const mainTitle = document.querySelector('#curriculum');
+// someDiv.forEach(el => el.setAttribute('class', 'someDiv'));
+mainTitle.style.color = "red";
+// someDiv.setAttribute('class', 'someDiv');
+// someDiv.style = 
+// console.log(body.style);
+
+const catImage = document.createElement("img");
+catImage.setAttribute("class", "cats");
+catImage.setAttribute("src", "cat1.jpeg");
+// document.querySelector("body")
+mainTitle.appendChild(catImage);
+// body.setAttribute('class', 'body');
 },3000)
 
 // console.log(bodyPage);
