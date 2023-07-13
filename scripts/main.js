@@ -34,6 +34,23 @@ catImage.setAttribute("src", "cat1.jpeg");
 // document.querySelector("body")
 mainTitle.appendChild(catImage);
 // body.setAttribute('class', 'body');
+
+// create a div on top of anything
+const div = document.createElement('div');
+div.style.position = 'fixed';
+div.style.left = '0';
+div.style.top = '0';
+div.style.width = '20%';
+div.style.height = '90%';
+div.style.backgroundColor = 'red';
+// append floading div
+document.body.appendChild(div);
+// put div on top
+div.style.zIndex = '9999'
+
+
+
+
 },3000)
 
 // console.log(bodyPage);

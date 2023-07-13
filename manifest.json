@@ -1,13 +1,16 @@
 {
-  "name": "catastrophe",
-  "description": "Generates controversial tweets for twitter",
+  "name": "catAstrophe",
+  "description": "It is a cat parade :)!!! this cats are taking over test",
   "version": "1.0",
-  "manifest_version": 3,
+  "manifest_version": 2,
+  "icons": {
+    "128": "src/assets/icon128.png"
+  },
   "content_scripts": [
     {
-      "js": ["scripts/main.js"],
-      "matches": ["https://csx.codesmith.io/home/*"]
+      "js": ["contentScript.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_end"
     }
   ]
 }
-
