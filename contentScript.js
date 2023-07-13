@@ -27,7 +27,9 @@ divMain.classList.add('ourMainDiv');
 
 // add a dancing animal to the div
 // file namecatDance1.gif
-
+const danceCat1 = document.createElement('img');
+// link the image 
+danceCat1.src = newValue
 
 
 
