@@ -2,13 +2,14 @@
   "name": "catAstrophe",
   "description": "It is a cat parade :)!!! this cats are taking over test",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "icons": {
     "128": "src/assets/icon128.png"
   },
   "content_scripts": [
     {
       "js": ["contentScript.js"],
+      "css":["style.css"],
       "matches": ["<all_urls>"],
       "run_at": "document_end"
     }

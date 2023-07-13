@@ -11,3 +11,12 @@
     left: 200px;
     top: 50vh;
 } */
+img {
+    border: 2px solid rgb(191, 0, 255) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+body {
+    background-color:rgb(251, 255, 0) !important;
+}

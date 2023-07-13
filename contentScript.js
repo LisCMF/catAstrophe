@@ -1,3 +1,21 @@
+
+// Listen for messages from the background script
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    if (request.action === 'replaceImages') {
+      // Select all the images on the page
+      const images = document.getElementsByTagName('img');
+  
+      // Loop through the images and replace the src with a random dancing cats GIF
+      for (let i = 0; i < images.length; i++) {
+        const randomCatIndex = Math.floor(Math.random() * 10) + 1;
+        const dancingCatsGIF = `dancing-cats${randomCatIndex}.gif`;
+        images[i].src = chrome.extension.getURL(dancingCatsGIF);
+      }
+    }
+  });
+
+/*
+//-------------
 // a div for the area of the screen that we are using 
 const divMain = document.createElement('div');
 
@@ -10,7 +28,7 @@ divMain.style.top = '0';
 divMain.style.zIndex = '9999';
 
 // we want the div to cover the page (make transparent later)
-divMain.style.width = '99%';
+divMain.style.width = '50%';
 divMain.style.height = '99%';
 
 // make it transparent green or grey
@@ -24,12 +42,24 @@ divMain.classList.add('ourMainDiv');
 
 
 // HOW WE ADD THINGS TO THE MAIN DIV - PUT EVERTHING ON IT :D 
-
+/*
 // add a dancing animal to the div
 // file namecatDance1.gif
-const danceCat1 = document.createElement('img');
-// link the image 
-danceCat1.src = newValue
+const image = document.createElement('img');
+image.src = chrome.runtime.getURL('https://usagif.com/dancing-cats-gifs/');
+image.style.width = '100px'; // Adjust the width as needed
+image.style.height = '100px'; // Adjust the height as needed
+image.style.position = 'absolute';
+image.style.top = '10px'; // Adjust the top position as needed
+image.style.left = '10px'; // Adjust the left position as needed
+
+// Append the image to the div
+divMain.appendChild(image);
+
+
+
+// add a class to the div so we can make other manual changes
+divMain.classList.add('ourMainDiv');
 
 
 
@@ -153,3 +183,4 @@ danceCat1.src = newValue
 // // console.log(bodyPage);
 
 //   console.log('hello WORld Rick Ross')
+*/
